@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact AECtech Engineering Services for all your engineering needs.">
+  <meta name="keywords" content="AECtech, Engineering, Contact, Services, Nigeria">
+  <meta name="author" content="AECtech Engineering Services">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Contact Us - AECtech Engineering Services</title>
+  <!-- External CSS and Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Internal CSS -->
+  <style>
+    :root {
+      --primary-color: hsl(273, 94%, 35%);
+      --secondary-color: #007BFF;
+      --whatsapp-color: #25D366;
+      --email-color: #007BFF;
+      --background-light: #f8f9fa;
+      --text-dark: #333;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-bottom: 80px; /* for fixed footer */
+      background-color: var(--background-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+      color: #FFD700;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    section ul li {
+      background-color: #ffffff;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+  .project-img:hover {
+    transform: scale(1.05);
+  }
+  .project-img:active {
+    transform: scale(0.95);
+  }
+  /* Removed empty ruleset for .project-img:focus */
+
+  .contact-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+        .contact-buttons a {
+            background-color: #25D366; /* WhatsApp color */
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .contact-buttons a:hover {
+            background-color: #128C7E; /* Darker WhatsApp color */
+        }
+        .contact-buttons a img {
+            width: 40px;
+            height: 40px;
+        }
+        .email-btn {
+            background-color: #007BFF; /* Email color */
+        }
+        .email-btn:hover {
+            background-color: #0056b3; /* Darker Email color */
+        }
+        .email-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .email-btn:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .whatsapp-btn img, .email-btn img {
+            transition: filter 0.3s;
+        }
+        .whatsapp-btn img:hover, .email-btn img:hover {
+            filter: brightness(0) invert(1);
+        }
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav ul li a {
+                font-size: 12px;
+            }
+            main {
+                padding: 15px;
+            }
+            section h2 {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            .contact-buttons a {
+                padding: 8px;
+            }
+            .contact-buttons a img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        @media (max-width: 480px) {
+            .contact-buttons {
+                bottom: 5px;
+                right: 5px;
+            }
+            .contact-buttons a {
+                padding: 6px;
+            }
+            .contact-buttons a img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            .contact-buttons a {
+                padding: 8px;
+            }
+            .contact-buttons a img {
+                width: 30px;
+                height: 30px;
+            }
+        }.contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-buttons a img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.contact-buttons a img:hover {
+  transform: scale(1.1);
+}
+
+</style>
+
+
+<body>
+
+  </style>
+</head>
+
+<body>
+<!-- Floating Contact Buttons -->
+<div class="contact-buttons">
+  <a href="https://wa.me/2349076982397" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+  <a href="mailto:kinggozec1@gmail.com" class="email-btn" title="Send Email">
+    <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email">
+  </a>
+</div>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Our Contact Details</h2>
+      <p><strong>Email:</strong> kinggozec1@gmail.com</p>
+      <p><strong>Phone:</strong> +234 9076982397 | +234 9032364493 | +234 9159495446</p>
+      <p><strong>Address:</strong> Nsukka, Enugu State, Nigeria, 410001</p>
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/aectechengineeringltd" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AECtech Engineering Services. All rights reserved.</p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

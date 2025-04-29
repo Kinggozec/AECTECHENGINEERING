@@ -1,0 +1,24 @@
+{
+  "name": "aectech-engineering-services-website",
+  "version": "1.0.0",
+  "description": "A website for a civil engineering company showcasing services, team, and contact information.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server public",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'No tests defined'"
+  },
+  "keywords": [
+    "civil engineering",
+    "construction",
+    "services",
+    "company"
+  ],
+  "author": "anagu eze chigozie",
+  "email": "kinggozec1@gmail.com",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
