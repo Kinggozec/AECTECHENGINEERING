@@ -1,3 +1,5 @@
+its showing not but big
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,27 +7,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AECtech Engineering Services</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-  /* CSS for the entire page */
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5; /* Light background */
+      background-color: #f5f5f5;
     }
+
+    /* Header Styles */
     header {
       background-color: #6a0dad;
       color: white;
       padding: 20px;
       text-align: center;
     }
+
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 10px;
     }
+
     nav a {
       margin: 10px;
       color: white;
@@ -33,23 +39,30 @@
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #9b30ff;
     }
+
+    /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(106,13,173,0.7), rgba(106,13,173,0.7)), url('https://images.unsplash.com/photo-1581090700227-1e8a63d7ef45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(106, 13, 173, 0.7)), 
+                  url('https://images.unsplash.com/photo-1581090700227-1e8a63d7ef45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 100px 20px;
     }
+
     .hero h2 {
       font-size: 48px;
       margin-bottom: 20px;
     }
+
     .hero p {
       font-size: 20px;
       margin-bottom: 30px;
     }
+
     .hero button {
       background-color: #9b30ff;
       color: white;
@@ -60,9 +73,12 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     .hero button:hover {
       background-color: #7b1fa2;
     }
+
+    /* Features Section */
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -71,22 +87,27 @@
       padding: 40px 20px;
       background-color: #ffffff;
     }
+
     .feature-card {
       background-color: #f0f0f0;
       padding: 20px;
       border-radius: 10px;
       width: 250px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
+
     .feature-card h3 {
       margin-bottom: 10px;
       color: #6a0dad;
     }
+
     .feature-card p {
       font-size: 14px;
       color: #555;
     }
+
+    /* Footer */
     footer {
       background-color: #6a0dad;
       color: white;
@@ -94,225 +115,207 @@
       padding: 10px;
       margin-top: 20px;
     }
+
+    /* Contact Buttons */
+    .contact-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-buttons a {
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      background-color: #128C7E;
+    }
+
+    .contact-buttons .email-btn {
+      background-color: #007BFF;
+    }
+
+    .contact-buttons .email-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-buttons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-buttons a img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
       }
+
+      nav a {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
       .hero h2 {
         font-size: 32px;
       }
+
       .features {
         flex-direction: column;
         align-items: center;
       }
-    } /* Closing the @media block */
-/* Bootstrap and GLightbox CSS are external dependencies and should be included in the HTML file, not in the CSS file. */
 
-/* Custom Zoom Effect */
-.project-img {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
+      .contact-buttons {
+        bottom: 10px;
+        right: 10px;
+      }
 
-  .project-img:hover {
-    transform: scale(1.05);
-  }
-  .project-img:active {
-    transform: scale(0.95);
-  }
-  .project-img:focus {
-    outline: none; /* Add a rule or remove this block if unnecessary */
-  }
+      .contact-buttons a {
+        padding: 8px;
+      }
 
-  .contact-buttons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-  }
-        .contact-buttons a {
-            background-color: #25D366; /* WhatsApp color */
-            color: white;
-            border-radius: 50%;
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-        .contact-buttons a:hover {
-            background-color: #128C7E; /* Darker WhatsApp color */
-        }
-        .contact-buttons a img {
-            width: 40px;
-            height: 40px;
-        }
-        .email-btn {
-            background-color: #007BFF; /* Email color */
-        }
-        .email-btn:hover {
-            background-color: #0056b3; /* Darker Email color */
-        }
-        .email-btn img {
-            width: 40px;
-            height: 40px;
-        }
-        .whatsapp-btn img {
-            width: 40px;
-            height: 40px;
-        }
-        .whatsapp-btn:hover img {
-            filter: brightness(0) invert(1);
-        }
-        .email-btn:hover img {
-            filter: brightness(0) invert(1);
-        }
-        .whatsapp-btn img, .email-btn img {
-            transition: filter 0.3s;
-        }
-        .whatsapp-btn img:hover, .email-btn img:hover {
-            filter: brightness(0) invert(1);
-        }
-        @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin-bottom: 10px;
-            }
-            nav ul li a {
-                font-size: 14px;
-            }
-        }
-        /* Closing duplicate media query */
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 24px;
-            }
-            nav ul li a {
-                font-size: 12px;
-            }
-            main {
-                padding: 15px;
-            }
-            section h2 {
-                font-size: 20px;
-            }
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                bottom: 10px;
-                right: 10px;
-            }
-            .contact-buttons a {
-                padding: 8px;
-            }
-            .contact-buttons a img {
-                width: 30px;
-                height: 30px;
-            }
-        }
-        @media (max-width: 480px) {
-            .contact-buttons {
-                bottom: 5px;
-                right: 5px;
-            }
-            .contact-buttons a {
-                padding: 6px;
-            }
-            .contact-buttons a img {
-                width: 25px;
-                height: 25px;
-            }
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                bottom: 10px;
-                right: 10px;
-            }
-            .contact-buttons a {
-                padding: 8px;
-            }
-            .contact-buttons a img {
-                width: 30px;
-                height: 30px;
-            }
-        }.contact-buttons {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+      .contact-buttons a img {
+        width: 30px;
+        height: 30px;
+      }
+    }
 
-.contact-buttons a img {
-  width: 48px;
-  height: 48px;
-  transition: transform 0.3s ease;
-}
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 24px;
+      }
 
-.contact-buttons a img:hover {
-  transform: scale(1.1);
-}
-</style>
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .contact-buttons {
+        bottom: 5px;
+        right: 5px;
+      }
+
+      .contact-buttons a {
+        padding: 6px;
+      }
+
+      .contact-buttons a img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    /* Project Image Zoom Effect */
+    .project-img {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-img:hover {
+      transform: scale(1.05);
+    }
+
+    .project-img:active {
+      transform: scale(0.95);
+    }
+
+    .project-img:focus {
+      outline: none;
+    }
+  </style>
 </head>
 
 <body>
-       <!-- Floating Contact Buttons -->
-       <div class="contact-buttons">
-        <a href="https://wa.me/2349076982397" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
-          <img loading="lazy" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp contact icon" />
-        </a>
-        <a href="mailto:kinggozec1@gmail.com" target="_blank" class="email-btn" title="Send Email">
-          <img loading="lazy" src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000/gmail--v1.png" alt="Email contact icon" />
-        </a>
-      </div>
-<header>
-  <h1>AECtech Engineering Services</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-    <a href="projects.html">Projects</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="careers.html">Careers</a>
-    <a href="faq.html">FAQ</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-  </nav>
-</header>
+  <!-- Floating Contact Buttons -->
+  <div class="contact-buttons">
+    <a href="https://wa.me/2349076982397" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+      <img loading="lazy" src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp contact icon" />
+    </a>
+    <a href="mailto:kinggozec1@gmail.com" target="_blank" class="email-btn" title="Send Email">
+      <img loading="lazy" src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000/gmail--v1.png" alt="Email contact icon" />
+    </a>
+  </div>
 
-<section class="hero">
-  <h2>Building the Future, Today</h2>
-  <p>Top-notch Civil Engineering Solutions for Structures that Last Generations</p>
-  <button onclick="window.location.href='contact.html'">Request a Quote</button>
-</section>
+  <header>
+    <h1>AECtech Engineering Services</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
 
-<section class="features">
-  <div class="feature-card">
-    <h3>Structural Design</h3>
-    <p>We create safe, efficient, and economical structural designs for all kinds of projects.</p>
-  </div>
-  <div class="feature-card">
-    <h3>Soil Testing</h3>
-    <p>Our geotechnical team ensures the strength and reliability of your construction foundation.</p>
-  </div>
-  <div class="feature-card">
-    <h3>Surveying</h3>
-    <p>Precision land surveying services for planning and successful project execution.</p>
-  </div>
-  <div class="feature-card">
-    <h3>Project Management</h3>
-    <p>Professional project handling to deliver on-time and on-budget with high quality standards.</p>
-  </div>
-</section>
+  <section class="hero">
+    
+  <!-- about us -->
+      <img loading="lazy" src="images/About-us.jpg" alt="About Us" class="project-img">
+    </a>
+  <div class="col-6 col-md-3 mb-4">
+    <a href="images/About-us.jpg" class="glightbox" data-gallery="about" data-title="about us">
+<!-- about us -->
+<div class="col-6 col-md-3 mb-4">
 
-<footer>
-  &copy; 2025 AECtech Engineering Services. All rights reserved.
-</footer>
-<script src="js/scripts.js"></script>
+  </a>
+</div>
+    </a>
+  </div>
+    <h1>Welcome to AECtech Engineering Services</h1>
+    <p>Your Partner in Innovative Civil Engineering Solutions</p>
+    <p>We are dedicated to providing high-quality engineering services for all your construction needs.</p>
+    <h2>Building the Future, Today</h2>
+    <p>Top-notch Civil Engineering Solutions for Structures that Last Generations</p>
+    <p>We specialize in structural design, soil testing, surveying, and project management.</p>
+    <p>Contact us for consultation and quote!</p>
+    <p>Our team of experts is ready to assist you with your next project.</p>
+    <p>Whether it's a residential, commercial, or industrial project, we have the expertise to deliver.</p>
+    <p>We pride ourselves on our commitment to quality, safety, and sustainability.</p>
+    <p>Let us help you turn your vision into reality with our comprehensive engineering services.</p>
+    <p>From concept to completion, we are with you every step of the way.</p>
+    <button onclick="window.location.href='contact.html'">Request a Quote</button>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>Structural Design</h3>
+      <p>We create safe, efficient, and economical structural designs for all kinds of projects.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Soil Testing</h3>
+      <p>Our geotechnical team ensures the strength and reliability of your construction foundation.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Surveying</h3>
+      <p>Precision land surveying services for planning and successful project execution.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Project Management</h3>
+      <p>Professional project handling to deliver on-time and on-budget with high quality standards.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 AECtech Engineering Services. All rights reserved.
+  </footer>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>

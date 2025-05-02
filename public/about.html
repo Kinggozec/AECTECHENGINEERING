@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - AECtech Engineering Services</title>
+  
+  <!-- External CSS and Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #6a0dad;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #9b30ff;
+    }
+    .hero {
+      background: linear-gradient(rgba(106,13,173,0.7), rgba(106,13,173,0.7)), url('https://images.unsplash.com/photo-1581090700227-1e8a63d7ef45?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero .btn-primary {
+      background-color: #9b30ff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .hero .btn-primary:hover {
+      background-color: #7b1fa2;
+    }
+    .features, .projects, .slogan, .contact {
+      padding: 60px 20px;
+      background: #fff;
+    }
+    .features h2, .projects h2, .slogan h2, .contact h2, #about h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #6a0dad;
+    }
+    footer {
+      background-color: #6a0dad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- GLightbox CSS -->
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+<!-- Custom Zoom Effect -->
+<style>
+  .project-img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-img:hover {
+    transform: scale(1.05);
+  }
+  .project-img:active {
+    transform: scale(0.95);
+  }
+  /* Removed empty ruleset for .project-img:focus */
+
+  .contact-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+        .contact-buttons a {
+            background-color: #25D366; /* WhatsApp color */
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .contact-buttons a:hover {
+            background-color: #128C7E; /* Darker WhatsApp color */
+        }
+        .contact-buttons a img {
+            width: 40px;
+            height: 40px;
+        }
+        .email-btn {
+            background-color: #007BFF; /* Email color */
+        }
+        .email-btn:hover {
+            background-color: #0056b3; /* Darker Email color */
+        }
+        .email-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn img {
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp-btn:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .email-btn:hover img {
+            filter: brightness(0) invert(1);
+        }
+        .whatsapp-btn img, .email-btn img {
+            transition: filter 0.3s;
+        }
+        .whatsapp-btn img:hover, .email-btn img:hover {
+            filter: brightness(0) invert(1);
+        }
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            nav ul li a {
+                font-size: 12px;
+            }
+            main {
+                padding: 15px;
+            }
+            section h2 {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            .contact-buttons a {
+                padding: 8px;
+            }
+            .contact-buttons a img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        @media (max-width: 480px) {
+            .contact-buttons {
+                bottom: 5px;
+                right: 5px;
+            }
+            .contact-buttons a {
+                padding: 6px;
+            }
+            .contact-buttons a img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                bottom: 10px;
+                right: 10px;
+            }
+            .contact-buttons a {
+                padding: 8px;
+            }
+            .contact-buttons a img {
+                width: 30px;
+                height: 30px;
+            }
+        }.contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-buttons a img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.contact-buttons a img:hover {
+  transform: scale(1.1);
+}
+
+</style>
+
+
+<body>
+<!-- Floating Contact Buttons -->
+<div class="contact-buttons">
+  <a href="https://wa.me/2349076982397" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+  <a href="mailto:kinggozec1@gmail.com" class="email-btn" title="Send Email">
+    <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email">
+  </a>
+</div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to AECtech Engineering Services</h1>
+    <p>Building Excellence, Innovating the Future</p>
+    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5">
+    <h2>About Us</h2>
+    <h3><p class="text-center">AECtech Engineering Services is a leading civil engineering firm based in Nigeria, specializing in delivering high-quality projects and innovative solutions.</p></h3>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="features">
+    <h2>Our Services</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="fas fa-drafting-compass fa-2x mb-3"></i>
+        <h4>Structural Design</h4>
+        <p>Strong, reliable designs with modern technology.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-hard-hat fa-2x mb-3"></i>
+        <h4>Construction</h4>
+        <p>Delivering top-quality infrastructure and buildings.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-tasks fa-2x mb-3"></i>
+        <h4>Project Management</h4>
+        <p>Efficient planning and smooth execution.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 class="text-center my-4">Our Projects</h2>
+<div class="container">
+  <div class="row">
+    <!-- Loop through images 1 to 17 -->
+    <!-- Repeat and edit src/alt for each image -->
+    <!-- Wrap each image in an anchor tag for lightbox -->
+    <!-- Example for all 17 below -->
+    <!-- You can replace `Project X` with custom names -->
+
+    <!-- Project 1 -->
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_1.jpg" class="glightbox" data-gallery="projects" data-title="Project 1">
+        <img src="images/our project_1.jpg" alt="Project 1" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <!-- Repeat same structure for Project 2 to 17 -->
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_2.jpg" class="glightbox" data-gallery="projects" data-title="Project 2">
+        <img src="images/our project_2.jpg" alt="Project 2" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_3.jpg" class="glightbox" data-gallery="projects" data-title="Project 3">
+        <img src="images/our project_3.jpg" alt="Project 3" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_4.jpg" class="glightbox" data-gallery="projects" data-title="Project 4">
+        <img src="images/our project_4.jpg" alt="Project 4" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_5.jpg" class="glightbox" data-gallery="projects" data-title="Project 5">
+        <img src="images/our project_5.jpg" alt="Project 5" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_6.jpg" class="glightbox" data-gallery="projects" data-title="Project 6">
+        <img src="images/our project_6.jpg" alt="Project 6" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_7.jpg" class="glightbox" data-gallery="projects" data-title="Project 7">
+        <img src="images/our project_7.jpg" alt="Project 7" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_8.jpg" class="glightbox" data-gallery="projects" data-title="Project 8">
+        <img src="images/our project_8.jpg" alt="Project 8" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_9.jpg" class="glightbox" data-gallery="projects" data-title="Project 9">
+        <img src="images/our project_9.jpg" alt="Project 9" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_10.jpg" class="glightbox" data-gallery="projects" data-title="Project 10">
+        <img src="images/our project_10.jpg" alt="Project 10" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_11.jpg" class="glightbox" data-gallery="projects" data-title="Project 11">
+        <img src="images/our project_11.jpg" alt="Project 11" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_12.jpg" class="glightbox" data-gallery="projects" data-title="Project 12">
+        <img src="images/our project_12.jpg" alt="Project 12" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_13.jpg" class="glightbox" data-gallery="projects" data-title="Project 13">
+        <img src="images/our project_13.jpg" alt="Project 13" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_14.jpg" class="glightbox" data-gallery="projects" data-title="Project 14">
+        <img src="images/our project_14.jpg" alt="Project 14" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_15.jpg" class="glightbox" data-gallery="projects" data-title="Project 15">
+        <img src="images/our project_15.jpg" alt="Project 15" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_16.jpg" class="glightbox" data-gallery="projects" data-title="Project 16">
+        <img src="images/our project_16.jpg" alt="Project 16" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+    <div class="col-6 col-md-3 mb-4">
+      <a href="images/our project_17.jpg" class="glightbox" data-gallery="projects" data-title="Project 17">
+        <img src="images/our project_17.jpg" alt="Project 17" class="img-fluid rounded shadow-sm project-img">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+    <p><h1>Transforming Ideas into Reality</h1></p>
+    <h2><p class="text-center">From residential to industrial projects, we transform ideas into reality.</p></h2>
+  </section>
+
+  <!-- Slogan Section -->
+  <section id="slogan" class="slogan">
+    <h2>Our Slogan</h2>
+   <h1></h1> <p class="text-center">Where structural integrity meets innovation.</p></h1>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p class="text-center">Email: kinggozec1@gmail.com | Phone: 09076982397</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 AECtech Engineering Services. All Rights Reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<!-- Initialize Lightbox -->
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - AECTECH Engineering Services</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <style>
+    :root {
+      --primary-color: hsl(273, 94%, 35%);
+      --secondary-color: #007BFF;
+      --background-light: #f8f9fa;
+      --text-dark: #333;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-bottom: 80px;
+      background-color: var(--background-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+      color: #FFD700;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    .blog-page h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .post {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .post:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .post h3 a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .post h3 a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .contact-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-buttons a img {
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-buttons a img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .contact-buttons {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .contact-buttons a img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-buttons {
+        bottom: 5px;
+        right: 5px;
+      }
+
+      .contact-buttons a img {
+        width: 30px;
+        height: 30px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Contact Buttons -->
+  <div class="contact-buttons">
+    <a href="https://wa.me/2349076982397" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+    </a>
+    <a href="mailto:kinggozec1@gmail.com" class="email-btn" title="Send Email">
+      <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Email">
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="blog-page container">
+      <h1>Blog</h1>
+      <div class="posts">
+        <article class="post">
+          <h3><a href="blog-post-1.html">Advancements in Sustainable Infrastructure Design</a></h3>
+        </article>
+        <article class="post">
+          <h3><a href="blog-post-2.html">Understanding Soil Analysis: Key Procedures</a></h3>
+        </article>
+        <article class="post">
+          <h3><a href="blog-post-3.html">Effective Project Management in Construction</a></h3>
+        </article>
+        <article class="post">
+          <h3><a href="blog-post-4.html">Innovations in Civil Engineering Materials</a></h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AECTECH Engineering Services. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
